@@ -1,153 +1,234 @@
+/* Devils Side Chick - Gothic Horror Author Platform Theme */
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  min-height: 100%;
+}
+
 body {
   margin: 0;
-  padding: 0;
   min-height: 100vh;
-  color: #f1e6e6;
-  font-family: Georgia, serif;
+  color: #f2e8e8;
+  font-family: Georgia, 'Times New Roman', serif;
+  line-height: 1.7;
   background:
-    radial-gradient(circle at top, rgba(120, 0, 0, 0.45), transparent 35%),
-    linear-gradient(rgba(0,0,0,.88), rgba(0,0,0,.96)),
-    url("https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1600&q=80");
+    radial-gradient(circle at 20% 5%, rgba(130, 0, 0, 0.55), transparent 28%),
+    radial-gradient(circle at 85% 20%, rgba(55, 0, 80, 0.35), transparent 30%),
+    linear-gradient(rgba(0, 0, 0, 0.88), rgba(0, 0, 0, 0.97)),
+    url('https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1600&q=80');
   background-size: cover;
-  background-attachment: fixed;
   background-position: center;
+  background-attachment: fixed;
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255,255,255,0.015) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.015) 1px, transparent 1px),
+    radial-gradient(circle at bottom, rgba(110, 0, 0, 0.25), transparent 40%);
+  background-size: 42px 42px, 42px 42px, cover;
+  pointer-events: none;
+  z-index: -1;
+}
+
+body::after {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background: radial-gradient(ellipse at center, transparent 40%, rgba(0,0,0,0.75) 100%);
+  pointer-events: none;
+  z-index: -1;
 }
 
 .site-header {
-  background: rgba(0,0,0,.88);
-  border-bottom: 1px solid #7a0000;
-  padding: 18px 40px;
+  background: rgba(0, 0, 0, 0.9);
+  border-bottom: 1px solid #760000;
+  box-shadow: 0 0 25px rgba(120, 0, 0, 0.35);
+  padding: 18px 42px;
+  position: sticky;
+  top: 0;
+  z-index: 10;
 }
 
 nav {
   display: flex;
   justify-content: space-between;
   align-items: center;
+  gap: 24px;
 }
 
 .logo {
-  color: #b00020;
+  color: #b80024;
   font-size: 2rem;
   text-decoration: none;
-  text-shadow: 0 0 12px #7a0000;
+  letter-spacing: 1px;
+  text-shadow: 0 0 12px #7a0000, 0 0 24px rgba(120,0,0,.65);
+}
+
+.nav-links {
+  display: flex;
+  gap: 18px;
+  flex-wrap: wrap;
 }
 
 .nav-links a {
-  color: #f1e6e6;
+  color: #f2e8e8;
   text-decoration: none;
-  margin-left: 18px;
   font-weight: bold;
+  letter-spacing: 0.5px;
+  position: relative;
+}
+
+.nav-links a::after {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: -6px;
+  width: 0;
+  height: 2px;
+  background: linear-gradient(90deg, #7a0000, #ff1a1a);
+  box-shadow: 0 0 10px #9b0000;
+  transition: width 0.25s ease;
 }
 
 .nav-links a:hover {
-  color: #ff1a1a;
-  text-shadow: 0 0 10px #8b0000;
+  color: #ffcccc;
+  text-shadow: 0 0 10px #7a0000;
+}
+
+.nav-links a:hover::after {
+  width: 100%;
 }
 
 .page,
 main {
-  padding: 60px 20px;
+  padding: 70px 22px;
 }
 
-.page-card,
 .hero-card,
+.page-card,
 .book-card,
 .project-card,
-.contact-card {
-  max-width: 1000px;
-  margin: 40px auto;
-  padding: 40px;
-  background: rgba(5, 5, 8, .88);
-  border: 1px solid #7a0000;
-  border-radius: 14px;
-  box-shadow: 0 0 35px rgba(120, 0, 0, .45);
+.contact-card,
+.card {
+  max-width: 1050px;
+  margin: 42px auto;
+  padding: 46px;
+  background: linear-gradient(145deg, rgba(3, 3, 6, 0.94), rgba(21, 6, 10, 0.88));
+  border: 1px solid rgba(150, 0, 0, 0.75);
+  border-radius: 18px;
+  box-shadow:
+    0 0 35px rgba(120, 0, 0, 0.55),
+    inset 0 0 40px rgba(0, 0, 0, 0.5);
+  backdrop-filter: blur(3px);
+}
+
+.hero-card {
+  min-height: 420px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
 }
 
 h1 {
-  color: #d00000;
-  font-size: 4rem;
-  margin-top: 0;
-  text-shadow: 0 0 18px #8b0000;
+  color: #b30018;
+  font-size: clamp(3rem, 8vw, 6rem);
+  line-height: 0.95;
+  margin: 0 0 24px;
+  text-shadow: 0 0 14px #780000, 0 0 38px rgba(150, 0, 0, 0.9);
 }
 
-h2, h3 {
-  color: #b00020;
-  text-shadow: 0 0 10px #5c0000;
+h2,
+h3 {
+  color: #d0a0a0;
+  text-shadow: 0 0 10px rgba(120, 0, 0, 0.85);
 }
 
 p {
+  color: #f1dddd;
   font-size: 1.1rem;
-  line-height: 1.8;
+  margin-bottom: 18px;
 }
 
-.soft-note,
-.tagline {
+.tagline,
+.soft-note {
   color: #d68a8a;
   font-style: italic;
+  letter-spacing: 0.8px;
 }
 
 .btn,
 button,
-a.button {
-  background: #8b0000;
-  color: white;
-  padding: 12px 20px;
-  border-radius: 8px;
-  text-decoration: none;
+a.button,
+.hero-card a,
+.page-card a {
+  color: #fff;
+}
+
+.btn,
+.button {
+  display: inline-block;
+  background: linear-gradient(135deg, #8b0000, #350000);
   border: 1px solid #ff1a1a;
-  box-shadow: 0 0 15px rgba(139,0,0,.6);
+  border-radius: 999px;
+  color: white;
+  padding: 12px 22px;
+  margin-right: 12px;
+  text-decoration: none;
+  box-shadow: 0 0 18px rgba(160, 0, 0, 0.65);
+}
+
+.btn:hover,
+.button:hover {
+  background: linear-gradient(135deg, #b30000, #520000);
+  transform: translateY(-2px);
+}
+
+.book-grid,
+.project-grid,
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+  gap: 28px;
+}
+
+.book-card,
+.project-card,
+.contact-card {
+  max-width: none;
+  margin: 20px 0;
 }
 
 footer {
   text-align: center;
-  padding: 20px;
-  background: rgba(0,0,0,.9);
-  border-top: 1px solid #7a0000;
-  color: #b8a0a0;
-}
-/* FINAL HORROR OVERRIDE */
-
-body {
-  background:
-    radial-gradient(circle at top, rgba(120, 0, 0, 0.65), transparent 35%),
-    linear-gradient(rgba(0,0,0,.92), rgba(0,0,0,.98)),
-    url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1600&q=80") !important;
-  background-size: cover !important;
-  background-attachment: fixed !important;
-  background-position: center !important;
+  padding: 26px;
+  color: #bfa8a8;
+  background: rgba(0, 0, 0, 0.94);
+  border-top: 1px solid #760000;
+  letter-spacing: 1px;
 }
 
-.page-card,
-.hero-card,
-.book-card,
-.project-card,
-.contact-card {
-  background: rgba(3, 3, 6, 0.92) !important;
-  border: 1px solid #7a0000 !important;
-  box-shadow: 0 0 35px rgba(120, 0, 0, 0.65) !important;
-}
+@media (max-width: 760px) {
+  .site-header {
+    padding: 16px 20px;
+  }
 
-h1 {
-  color: #b30000 !important;
-  text-shadow: 0 0 18px #7a0000, 0 0 35px #250000 !important;
-}
+  nav {
+    flex-direction: column;
+    align-items: flex-start;
+  }
 
-.logo {
-  color: #9b0000 !important;
-  text-shadow: 0 0 12px #7a0000 !important;
-}
-
-.nav-links a:hover {
-  color: #ff1a1a !important;
-}
-
-body::before {
-  content: "";
-  position: fixed;
-  inset: 0;
-  background:
-    radial-gradient(circle at 20% 20%, rgba(120,0,0,.22), transparent 25%),
-    radial-gradient(circle at 80% 80%, rgba(40,0,0,.35), transparent 30%);
-  pointer-events: none;
-  z-index: -1;
+  .page-card,
+  .hero-card,
+  .book-card,
+  .project-card,
+  .contact-card {
+    padding: 28px;
+  }
 }
