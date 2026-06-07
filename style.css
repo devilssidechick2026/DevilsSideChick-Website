@@ -1,73 +1,107 @@
 body {
-    background: #050505;
-    color: #e6e6e6;
-    font-family: Georgia, serif;
-    margin: 0;
-    padding: 0;
-    min-height: 100vh;
-
-    background-image:
-    radial-gradient(circle at top, rgba(120,0,0,0.4), transparent 40%),
-    linear-gradient(rgba(0,0,0,0.85), rgba(0,0,0,0.95)),
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  color: #f1e6e6;
+  font-family: Georgia, serif;
+  background:
+    radial-gradient(circle at top, rgba(120, 0, 0, 0.45), transparent 35%),
+    linear-gradient(rgba(0,0,0,.88), rgba(0,0,0,.96)),
     url("https://images.unsplash.com/photo-1518709268805-4e9042af2176?auto=format&fit=crop&w=1600&q=80");
-
-    background-size: cover;
-    background-attachment: fixed;
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
 }
 
 .site-header {
-    background: rgba(0,0,0,0.8);
-    border-bottom: 1px solid #660000;
-    padding: 20px;
+  background: rgba(0,0,0,.88);
+  border-bottom: 1px solid #7a0000;
+  padding: 18px 40px;
+}
+
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
 }
 
 .logo {
-    color: #b30000;
-    font-size: 2rem;
-    text-decoration: none;
-    font-family: "Times New Roman", serif;
-    text-shadow: 0 0 10px #b30000;
+  color: #b00020;
+  font-size: 2rem;
+  text-decoration: none;
+  text-shadow: 0 0 12px #7a0000;
 }
 
 .nav-links a {
-    color: #e6e6e6;
-    text-decoration: none;
-    margin-left: 20px;
+  color: #f1e6e6;
+  text-decoration: none;
+  margin-left: 18px;
+  font-weight: bold;
 }
 
 .nav-links a:hover {
-    color: #cc0000;
+  color: #ff1a1a;
+  text-shadow: 0 0 10px #8b0000;
 }
 
-.page-card {
-    max-width: 1000px;
-    margin: 60px auto;
-    padding: 40px;
-    background: rgba(15,15,15,0.85);
-    border: 1px solid #660000;
-    border-radius: 10px;
-    box-shadow: 0 0 25px rgba(150,0,0,0.4);
+.page,
+main {
+  padding: 60px 20px;
+}
+
+.page-card,
+.hero-card,
+.book-card,
+.project-card,
+.contact-card {
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 40px;
+  background: rgba(5, 5, 8, .88);
+  border: 1px solid #7a0000;
+  border-radius: 14px;
+  box-shadow: 0 0 35px rgba(120, 0, 0, .45);
 }
 
 h1 {
-    color: #d10000;
-    font-size: 4rem;
-    text-shadow: 0 0 15px #8b0000;
+  color: #d00000;
+  font-size: 4rem;
+  margin-top: 0;
+  text-shadow: 0 0 18px #8b0000;
+}
+
+h2, h3 {
+  color: #b00020;
+  text-shadow: 0 0 10px #5c0000;
 }
 
 p {
-    line-height: 1.8;
-    font-size: 1.1rem;
+  font-size: 1.1rem;
+  line-height: 1.8;
 }
 
-.soft-note {
-    color: #b84d4d;
-    font-style: italic;
+.soft-note,
+.tagline {
+  color: #d68a8a;
+  font-style: italic;
+}
+
+.btn,
+button,
+a.button {
+  background: #8b0000;
+  color: white;
+  padding: 12px 20px;
+  border-radius: 8px;
+  text-decoration: none;
+  border: 1px solid #ff1a1a;
+  box-shadow: 0 0 15px rgba(139,0,0,.6);
 }
 
 footer {
-    text-align: center;
-    padding: 20px;
-    border-top: 1px solid #660000;
-    background: rgba(0,0,0,0.8);
+  text-align: center;
+  padding: 20px;
+  background: rgba(0,0,0,.9);
+  border-top: 1px solid #7a0000;
+  color: #b8a0a0;
 }
