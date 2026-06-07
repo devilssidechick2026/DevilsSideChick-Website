@@ -105,3 +105,49 @@ footer {
   border-top: 1px solid #7a0000;
   color: #b8a0a0;
 }
+/* FINAL HORROR OVERRIDE */
+
+body {
+  background:
+    radial-gradient(circle at top, rgba(120, 0, 0, 0.65), transparent 35%),
+    linear-gradient(rgba(0,0,0,.92), rgba(0,0,0,.98)),
+    url("https://images.unsplash.com/photo-1511497584788-876760111969?auto=format&fit=crop&w=1600&q=80") !important;
+  background-size: cover !important;
+  background-attachment: fixed !important;
+  background-position: center !important;
+}
+
+.page-card,
+.hero-card,
+.book-card,
+.project-card,
+.contact-card {
+  background: rgba(3, 3, 6, 0.92) !important;
+  border: 1px solid #7a0000 !important;
+  box-shadow: 0 0 35px rgba(120, 0, 0, 0.65) !important;
+}
+
+h1 {
+  color: #b30000 !important;
+  text-shadow: 0 0 18px #7a0000, 0 0 35px #250000 !important;
+}
+
+.logo {
+  color: #9b0000 !important;
+  text-shadow: 0 0 12px #7a0000 !important;
+}
+
+.nav-links a:hover {
+  color: #ff1a1a !important;
+}
+
+body::before {
+  content: "";
+  position: fixed;
+  inset: 0;
+  background:
+    radial-gradient(circle at 20% 20%, rgba(120,0,0,.22), transparent 25%),
+    radial-gradient(circle at 80% 80%, rgba(40,0,0,.35), transparent 30%);
+  pointer-events: none;
+  z-index: -1;
+}
