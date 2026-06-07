@@ -65,11 +65,11 @@ nav {
 
 .logo {
     font-family: 'Great Vibes', cursive;
-    color: #b80024;
-    font-size: 3rem;
+    color: #c4002f;
+    font-size: 3.4rem;
     text-decoration: none;
     letter-spacing: 0;
-    text-shadow: 0 0 12px #7a0000, 0 0 24px rgba(120,0,0,.65);
+    text-shadow: 0 0 6px rgba(255, 80, 120, 0.5);
 }
 
 .nav-links {
