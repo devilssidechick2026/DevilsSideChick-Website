@@ -291,3 +291,33 @@ footer {
 .book-block p {
   line-height: 1.8;
 }
+.music-links {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+gap: 15px;
+margin-top: 20px;
+}
+
+.music-links a {
+background: #1e1e1e;
+color: white;
+text-decoration: none;
+padding: 12px 20px;
+border-radius: 8px;
+border: 1px solid #b9072d;
+transition: all 0.3s ease;
+}
+
+.music-links a:hover {
+background: #b9072d;
+color: white;
+transform: translateY(-3px);
+box-shadow: 0 0 15px rgba(185, 7, 45, 0.5);
+}
+
+.contact-list h2 {
+text-align: center;
+margin-top: 30px;
+color: #b9072d;
+}
