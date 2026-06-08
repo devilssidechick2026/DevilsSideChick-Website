@@ -321,3 +321,98 @@ text-align: center;
 margin-top: 30px;
 color: #b9072d;
 }
+/* ABOUT PAGE */
+
+.about-container {
+    display: grid;
+    grid-template-columns: 500px 1fr;
+    gap: 50px;
+    max-width: 1400px;
+    margin: auto;
+    align-items: start;
+}
+
+.about-image img {
+    width: 100%;
+    border-radius: 15px;
+    border: 1px solid #700000;
+    box-shadow: 0 0 35px rgba(120,0,0,.6);
+}
+
+.about-title {
+    font-family: 'Great Vibes', cursive;
+    color: #d88a8a;
+    text-align: center;
+    font-size: 5rem;
+    margin-bottom: 25px;
+    text-shadow: 0 0 15px rgba(255,50,50,.4);
+}
+
+.about-content {
+    background: rgba(0,0,0,.55);
+    padding: 35px;
+    border-radius: 15px;
+    border: 1px solid rgba(120,0,0,.4);
+}
+
+.about-content p {
+    font-size: 1.15rem;
+    line-height: 1.9;
+}
+
+.highlight {
+    color: #d13f3f;
+    font-weight: bold;
+}
+
+.author-motto {
+    text-align: center;
+    margin-top: 35px;
+    margin-bottom: 35px;
+    padding: 15px;
+    border: 1px solid #700000;
+    border-radius: 12px;
+    color: #d88a8a;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+}
+
+.author-cards {
+    display: grid;
+    grid-template-columns: repeat(3,1fr);
+    gap: 20px;
+    margin-top: 30px;
+}
+
+.author-card {
+    text-align: center;
+    padding: 20px;
+    background: rgba(20,20,20,.8);
+    border: 1px solid #700000;
+    border-radius: 12px;
+}
+
+.author-card h3 {
+    color: #c24545;
+    margin-bottom: 10px;
+}
+
+.author-card p {
+    font-size: .95rem;
+}
+
+@media (max-width: 1000px) {
+
+    .about-container {
+        grid-template-columns: 1fr;
+    }
+
+    .about-title {
+        font-size: 3.5rem;
+    }
+
+    .author-cards {
+        grid-template-columns: 1fr;
+    }
+}
