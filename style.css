@@ -65,7 +65,7 @@ nav {
 
 .logo {
     font-family: 'Great Vibes', cursive;
-    color: #c4002f;
+    color: purple;
     font-size: 3.4rem;
     text-decoration: none;
     letter-spacing: 0;
@@ -236,7 +236,7 @@ footer {
 .motto {
     font-family: 'Great Vibes', cursive;
     font-size: 2.2rem;
-    color: #c4002f;
+    color: purple;
     text-align: center;
     margin-top: 15px;
     margin-bottom: 25px;
