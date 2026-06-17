@@ -57,6 +57,8 @@ body::after {
 }
 
 nav {
+  max-width: 1050px;
+  margin: 0 auto;
   display: flex;
   justify-content: space-between;
   align-items: center;
@@ -129,22 +131,30 @@ main {
     inset 0 0 40px rgba(0, 0, 0, 0.5);
   backdrop-filter: blur(3px);
 }
-
+.content-section {
+    padding-left: 110px;
+}
 .hero-card {
   min-height: 420px;
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
-
+.eyebrow {
+    text-align: center;
+}
 h1 {
   color: #b30018;
   font-size: clamp(3rem, 8vw, 6rem);
   line-height: 0.95;
   margin: 0 0 24px;
   text-shadow: 0 0 14px #780000, 0 0 38px rgba(150, 0, 0, 0.9);
+  text-align: center;
 }
-
+h1 span {
+    display: block;
+    text-align: center;
+}
 h2,
 h3 {
   color: #d0a0a0;
